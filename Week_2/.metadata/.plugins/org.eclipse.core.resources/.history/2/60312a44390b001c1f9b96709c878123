@@ -1,0 +1,18 @@
+package com.revature.repositories;
+
+import com.revature.models.User;
+
+/**
+ * DAO is a data access object
+ * 
+ * it is used to seperate our persistance logic from our business logic
+ * @author ryanm
+ *
+ */
+public interface IUserDao {
+	
+	public int insert(User u); // we aim to return the primary key of the user inserted into the DB
+	
+	
+	
+}

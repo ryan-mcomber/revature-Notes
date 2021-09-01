@@ -1,0 +1,79 @@
+package com.revature.util;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection; //this is JDBC
+import java.sql.DriverManager; //this is JDBC
+import java.sql.SQLException;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+
+import jdk.internal.org.jline.utils.Log;
+
+//Singletop design pattern instantiates an object ONCE
+
+/**
+ * Singleton design pattern
+ * 
+ * --private constructors
+ * -- static field of an instance of the class to be returned
+ * -- leverage a public static getInstance() (our getInstance method in this case is the getConnection() method
+ * 
+ * @author ryanm
+ *
+ */
+public class ConnectionUtil {
+	
+	private static Logger log = Logger.getLogger(ConnectionUtil.class);
+	
+	private static Connection conn = null;
+	
+	// we want to make the constructor PRIVATE
+	private ConnectionUtil() {
+		super();
+	}
+
+	// in a singleton design pattern you create a static getInstance method
+	public static Connection getConnection() {
+		
+		try {
+			if(conn != null && !conn.isClosed()) {
+				
+				return conn;
+				
+			}
+		} catch (SQLException e) {
+			//implement error logging here
+			return null;
+		}
+		
+		Properties prop = new Properties();
+		
+		String url = "";
+		String username = "";
+		String password = "";
+		
+		
+		try {
+			prop.load(new FileReader("C:\\Users\\ryanm\\Desktop\\revature-Notes\\Week 2\\JDBCdemo\\src\\main\\resources\\application.properties"));
+			url = prop.getProperty("url");
+			username = prop.getProperty("username");
+			password = prop.getProperty("password");
+			conn = DriverManager.getConnection(url,username,password);
+			
+			log.info("Database Connection Established");
+			System.out.println("Connected");
+		} catch (IOException e) {
+			log.error("Cannout locate application.properties file.");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			log.error("Cannot establish database connection")
+			return null;
+		}
+		
+		return conn;
+		
+	}
+}
