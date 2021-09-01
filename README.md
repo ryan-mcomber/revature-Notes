@@ -1,2 +1,2 @@
-#Notes and code written during class.
+# Notes and code written during class.
 -Ryan McOmber
