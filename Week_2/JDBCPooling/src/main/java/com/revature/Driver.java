@@ -9,6 +9,9 @@ import javax.sql.DataSource;
 
 import com.revature.util.ConnectionPool;
 
+//start looking into hibernate is -> Spring Data (get ahead)
+// Hibernate uses Hikari... Hikari is like ApacheCommons DBCP, which is a Connection Pooling Library
+
 public class Driver {
 
 	public static void main(String[] args) throws SQLException {
@@ -25,7 +28,6 @@ public class Driver {
 			//get the connection (from the pool)
 			System.out.println("===============Making a new connection Object for a DB operation!===================");
 			connObj = dataSource.getConnection();
-			
 			//print the dbStatus()
 			jdbcObj.printDbStatus();
 			// use the fetch connection to execute a query from heroes dB
@@ -43,15 +45,7 @@ public class Driver {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			
-//			if( rs != null) {
-//				rs.close();
-//			}
-//			
-//			if(pstmtObj != null) {
-//				pstmtObj.close();
-//			}
-			
+		
 			connObj.close(); //close the specific connection so it can be sent back to the pool
 			// this sends the connection to an IDLE state .... it can be used again
 		}

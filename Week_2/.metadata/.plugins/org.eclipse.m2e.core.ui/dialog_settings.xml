@@ -48,6 +48,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="JDBCPooling"/>
 			<item value="JDBCdemo"/>
 		</list>
 		<list key="projectNameTemplate">

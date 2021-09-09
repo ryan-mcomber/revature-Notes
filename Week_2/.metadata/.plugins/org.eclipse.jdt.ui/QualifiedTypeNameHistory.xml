@@ -5,10 +5,7 @@
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="com.revature.util.ConnectionUtil"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.Types"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
     <fullyQualifiedTypeName name="com.revature.repositories.IAccountDao"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -26,4 +23,15 @@
     <fullyQualifiedTypeName name="com.revature.models.Role"/>
     <fullyQualifiedTypeName name="com.revature.models.User"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.apache.commons.pool.impl.GenericObjectPool"/>
+    <fullyQualifiedTypeName name="org.apache.commons.dbcp.ConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.commons.dbcp.DriverManagerConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.commons.dbcp.PoolableConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.commons.dbcp.PoolingDataSource"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.revature.util.ConnectionPool"/>
+    <fullyQualifiedTypeName name="javax.activation.DataSource"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
 </qualifiedTypeNameHistroy>
