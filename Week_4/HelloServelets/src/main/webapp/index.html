@@ -12,25 +12,47 @@
 	<div class="supervillain-container">
 		<h1>Welcome to SuperVillain Servlets</h1>
 		<form method="GET" action="dirserv"> <!--  Tomcat web container read the web.xml and understands that /dirserv points to DirectServlet -->
-			<p>Direct Servlet, GET!</p>
+			<p>Direct Servelet, GET!</p>
 			<input type="submit" value="Direct Text Response">
 		</form>
 		<form method = "POST" action="dirserv">
 		
-			<p>Direct Servlet, POST!</p>
+			<p>Direct Servelet, POST!</p>
 			<input type = "submit" value="Direct Text Response">
 			
 		</form>
 		<form method = "GET" action="indirserv">
 		
-			<p>Indirect Servlet, GET!</p>
+			<p>Indirect Servelet, GET!</p>
 			<input type = "submit" value="Request to get Response from Other Servlet via sendRedirect()">
 			
 		</form>
 		<form method = "POST" action="indirserv">
 		
-			<p>Indirect Servlet, POST!</p>
+			<p>Indirect Servelet, POST!</p>
 			<input type = "submit" value="Request to get Response from Other Servlet via forward()">
+			
+		</form>
+		<form method = "GET" action="sesserv">
+		
+			<p>Session Servlet, GET!</p>
+			<input type = "submit" value="Push Mud Man to the Session">
+			
+		</form>
+		<form method = "POST" action="sesserv">
+		
+			<p>Session Servelet, POST!</p>
+			<input type = "text" name="name" placeholder = "Enter an evil name"/><br />
+			<input type = "text" name="superpower" placeholder = "Enter an evil superpower"/><br />
+			<input type = "number" name="bounty" placeholder = "Enter a bounty"/><br />
+			
+			<input type = "submit" value="Push a custom villain to the session">
+			
+		</form>
+		<form method = "GET" action="helperserv">
+		
+			<p>Helper Servlet, GET!</p>
+			<input type = "submit" value="Find active session villain">
 			
 		</form>
 		<hr>

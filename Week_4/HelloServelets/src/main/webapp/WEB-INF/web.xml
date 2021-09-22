@@ -7,6 +7,7 @@
   <servlet>
     <servlet-name>DirServ</servlet-name>
     <servlet-class>com.revature.directservlet.DirectServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>DirServ</servlet-name>
@@ -19,5 +20,21 @@
   <servlet-mapping>
     <servlet-name>IndirectServlet</servlet-name>
     <url-pattern>/indirserv</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>com.revature.sessionservlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/sesserv</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HelperSessionServlet</servlet-name>
+    <servlet-class>com.revature.sessionservlet.HelperSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelperSessionServlet</servlet-name>
+    <url-pattern>/helperserv</url-pattern>
   </servlet-mapping>
 </web-app>
