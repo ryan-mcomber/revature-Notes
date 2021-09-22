@@ -1,9 +1,12 @@
 package com.revature.controller;
 
-import org.springframework.stereotype.Controller;
+import java.util.List;
 
-// tell Spring MVC that this class is capable of handling HTTP web requests
-@Controller
-public class HeroController {
+import com.revature.model.ClientMessage;
+import com.revature.model.Hero;
 
+public interface HeroController {
+	List<Hero> findAllHeroes();
+	ClientMessage registerHero(Hero hero);
+	Hero findHero(String name);
 }
