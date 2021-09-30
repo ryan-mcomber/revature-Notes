@@ -26,15 +26,7 @@ function getUser(userId, callback){
 }
 
 //getService
-function getServices(user, callback){
 
-    console.log(`Get services of ${user.username} from the API`)
-
-    setTimeout(()=>{
-        callback(['Email','VPN','CDN'])
-    },2*1000)
-
-}
 
 //getServiceCost
 function getServiceCost(services,callback){
@@ -50,8 +42,8 @@ function getServiceCost(services,callback){
 
 getUser(104,(user) => {
     //the "2nd paramater is a function (callback function)"
-    getServices(user,(services) => {
-        getServiceCost(services, (cost) =>{
+    getServices(user,(services) => { //implementing callback as 2nd param for getServices()
+        getServiceCost(services, (cost) =>{ // implementing callback as 2nd param for getServiceCost();
             console.log(`the service cost is ${cost}`)
         })
     })
